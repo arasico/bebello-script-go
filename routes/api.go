@@ -1,8 +1,10 @@
 package routes
 
-import "bebello-script-go/utils"
+import (
+	"bebello-script-go/models"
+)
 
-var routes = utils.Routes{
+var routes = models.Routes{
 	//utils.Route{
 	//	"Index",
 	//	"GET",
