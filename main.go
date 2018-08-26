@@ -1,7 +1,9 @@
 package main
 
 import (
+	"bebello-script-go/app"
 	"bebello-script-go/routes"
+	"bebello-script-go/utils"
 	"fmt"
 	"github.com/gorilla/handlers"
 	"github.com/joho/godotenv"
@@ -15,6 +17,11 @@ func main() {
 	port := os.Getenv("PORT")
 	if port == "" {
 		port = "8000"
+	}
+	err := app.Connect()
+	if err != nil {
+		utils.LogIt(err, "failed connecting to mongo")
+		panic(err)
 	}
 	router := routes.NewRouter()
 	// These two lines are important if you're designing a front-end to utilise this API methods
