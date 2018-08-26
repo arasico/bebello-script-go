@@ -5,10 +5,10 @@ import (
 )
 
 var routes = models.Routes{
-	//utils.Route{
-	//	"Index",
-	//	"GET",
-	//	"/",
+	//models.Route{
+	//	"login",
+	//	"POST",
+	//	"/api/v1/auth/login",
 	//	Index,
 	//},
 	//utils.Route{
